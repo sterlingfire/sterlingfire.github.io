@@ -16,6 +16,9 @@ roles:
       - Engineered new connectors for LED staves, then field-tested them in performance
       - Streamlined new parts for production tolerances and print time
       - Ran roughly twenty printers covering all hardware production needs
+      - Researched materials & hardware to optimize printing needs
+      - Optimized print times by moving printer hardware to Bambu
+      - Streamlined print management by moving cloud printing from manual SD cards
   - years: Ongoing
     where: San Francisco, CA
     title: Stagehand — Scenic Carpentry & Rigging
