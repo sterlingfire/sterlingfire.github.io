@@ -1,11 +1,11 @@
 ---
 order: 2
 slug: light
-title: LED Installation & Fabrication
+title: LED Installation & Prop Design
 hue: flux
 plate: lattice
 years: 2023 — Present
-tags: [Fusion 360, Simplify3D, FDM print farm, Connector design, LED electronics, Design for manufacture, Scenic carpentry, Rigging]
+tags: [Fusion 360, Simplify3D, FDM print farm, Connector design, LED electronics, Design for manufacture]
 roles:
   - years: 2023 — 2025
     where: Emeryville, CA
@@ -19,11 +19,6 @@ roles:
       - Researched materials & hardware to optimize printing needs
       - Optimized print times by moving printer hardware to Bambu
       - Streamlined print management by moving cloud printing from manual SD cards
-  - years: Ongoing
-    where: San Francisco, CA
-    title: Stagehand — Scenic Carpentry & Rigging
-    org: IATSE Local 16
-    summary: Union stagehand working scenic carpentry, fabrication, and rigging for live events — the structural half of installation work, and where the large-scale instincts come from.
 
 # TODO (Sterling): add LED installation projects here as new roles —
 # title, venue or event, year, and two or three bullets on what you built.

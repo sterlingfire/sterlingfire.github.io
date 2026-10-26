@@ -14,7 +14,7 @@
   var reduce = false;
   try { reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches; } catch (e) {}
 
-  var HUES = { sky: [92, 200, 250], flux: [234, 134, 251], ember: [255, 154, 77] };
+  var HUES = { sky: [92, 200, 250], flux: [234, 134, 251], ember: [255, 154, 77], spike: [110, 231, 160] };
 
   function fit(cv) {
     var dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -91,6 +91,14 @@
         out.push([r * Math.cos(t * 1.1 + ph), r * Math.sin(t * 2 + ph) * 0.46]);
       }
       return out;
+    },
+    toolpath: function (t) { // CNC pocketing pass: a rounded-rectangle spiral stepping inward
+      var T = 2 * Math.PI * 7;                 // seven passes from outside wall to centre
+      var u = ((t * 3.15) % T + T) % T;
+      var r = 0.95 - 0.8 * (u / T);
+      var c = Math.cos(u), s = Math.sin(u);
+      return [[r * Math.sign(c) * Math.pow(Math.abs(c), 0.33),
+               r * Math.sign(s) * Math.pow(Math.abs(s), 0.33) * 0.62]];
     },
     flame: function (t) {
       var r = 0.3 + 0.5 * Math.abs(Math.sin(t * 0.8));
