@@ -1,0 +1,15 @@
+{% assign v = include.video %}
+<article class="card">
+  <a class="card-art yt" href="https://www.youtube.com/watch?v={{ v.id }}" data-yt="{{ v.id }}"
+     data-title="{{ v.title | escape }}" aria-label="Play video: {{ v.title | escape }}">
+    <canvas data-prop="{{ v.prop }}" data-seed="{{ v.seed | default: 0 }}" aria-hidden="true"></canvas>
+    <span class="play" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
+    </span>
+    <span class="card-prop">{{ v.prop }}</span>
+  </a>
+  <div class="card-txt">
+    <p class="card-title">{{ v.title }}{% if v.aside %} <span class="aside">{{ v.aside }}</span>{% endif %}</p>
+    <p class="card-meta"><span>{{ v.duration }}</span><span>{{ v.tag }}</span></p>
+  </div>
+</article>

@@ -1,0 +1,39 @@
+<header class="hero">
+  <canvas id="heroTrails" aria-hidden="true"></canvas>
+  <div class="wrap hero-inner">
+    <div class="eyebrow mono rise">
+      <span>{{ page.location }}</span>
+      <span>{{ page.kicker }}</span>
+    </div>
+
+    <h1 class="rise">{{ site.title }}</h1>
+
+    <p class="triad rise">
+      {%- for part in page.triad -%}
+        {%- unless forloop.first -%}<span class="sep">/</span>{%- endunless -%}
+        <span class="t-{{ part.hue }}">{{ part.label }}</span>
+      {%- endfor -%}
+    </p>
+
+    <div class="hero-grid">
+      <div class="hero-text">
+        <div class="lede">{{ content }}</div>
+
+        <p class="status"><span class="dot" aria-hidden="true"></span>{{ page.status }}</p>
+
+        <nav class="jumps" aria-label="Practices">
+          {% assign practices = site.practices | sort: "order" %}
+          {% for p in practices %}
+            <a class="jump jump-{{ p.hue }}" href="#{{ p.slug }}">0{{ forloop.index }} — {{ p.slug }}</a>
+          {% endfor %}
+        </nav>
+      </div>
+
+      <figure class="hero-photo">
+        <img src="{{ page.photo.src | relative_url }}" width="{{ page.photo.width }}" height="{{ page.photo.height }}"
+             decoding="async" fetchpriority="high" alt="{{ page.photo.alt | escape }}">
+        <figcaption class="photo-cap">{{ page.photo.caption }}</figcaption>
+      </figure>
+    </div>
+  </div>
+</header>

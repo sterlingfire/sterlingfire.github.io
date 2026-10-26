@@ -1,0 +1,43 @@
+# ---------------------------------------------------------------------------
+# Site settings. Restart `bundle exec jekyll serve` after editing this file.
+# ---------------------------------------------------------------------------
+title: Sterling Bishop
+description: >-
+  Full-stack engineer, LED installation artist, and fire performer
+  based in the San Francisco Bay Area.
+author: Sterling Bishop
+email: jsterlingbishop@gmail.com
+lang: en_US
+image: /assets/img/swords.jpg      # social share card
+
+# Leave these blank. On GitHub Pages they're filled in automatically from the
+# repository name, so the site works as either <user>.github.io or a project page.
+url: ""
+baseurl: ""
+
+social:
+  name: Sterling Bishop
+  links:
+    - https://www.linkedin.com/in/sterling-bishop
+    - https://www.instagram.com/sterling_fire/
+    - https://www.youtube.com/channel/UCyLCUQfT2YqplBEun-FlONw
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+collections:
+  practices:
+    output: false        # rendered inside the home page, not as their own pages
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
+  - node_modules

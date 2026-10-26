@@ -1,0 +1,36 @@
+# Titles verified against YouTube's oEmbed API on 2026-10-26.
+# prop picks the light-trail drawing shown before the video loads:
+#   poi, doublestaff, dragonstaff, ropedart, sword, contact
+# seed (optional): for poi, an odd number draws the five-petal antispin flower.
+- id: gINeHpsUBXM
+  title: "Sterling: Green Flame Sword to the sound of waves"
+  duration: "4:03"
+  tag: Most watched
+  prop: sword
+- id: 9OspUQmttMI
+  title: "3… 2… 1… Let's Jam."
+  aside: (Space Cowboy in a Ghost Town)
+  duration: "3:41"
+  tag: Performance video
+  prop: poi
+- id: hRXcmBm1L2g
+  title: Fire Double Staves
+  duration: "3:08"
+  tag: Two-prop
+  prop: doublestaff
+- id: GVvMsKPSU1U
+  title: RopeDart burn
+  duration: "3:41"
+  tag: Tethered
+  prop: ropedart
+- id: cATbqr-khDE
+  title: Beach. Fire. Waves.
+  duration: "4:47"
+  tag: Shoreline
+  prop: contact
+- id: PPS4LAY1H9I
+  title: Fire Poi Running Up That Hill
+  duration: "3:49"
+  tag: Performance video
+  prop: poi
+  seed: 7

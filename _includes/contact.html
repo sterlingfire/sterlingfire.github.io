@@ -1,0 +1,18 @@
+<section class="chapter contact" id="contact" aria-labelledby="h-contact">
+  <div class="wrap contact-inner">
+    <h2 id="h-contact">Get in touch</h2>
+    <p class="chap-lede">
+      Currently looking for engineering work in the Bay Area. Always up for talking about
+      props, printers, or rigging.
+    </p>
+    <ul class="links">
+      {% if site.email %}
+      <li><a href="mailto:{{ site.email }}"><span class="lk-name">Email</span><span class="lk-val">{{ site.email }}</span></a></li>
+      {% endif %}
+      {% for l in site.data.links %}
+      <li><a href="{{ l.href }}"><span class="lk-name">{{ l.name }}</span><span class="lk-val">{{ l.value }}</span></a></li>
+      {% endfor %}
+    </ul>
+    <p class="foot">{{ site.title }} · {{ page.location }}</p>
+  </div>
+</section>

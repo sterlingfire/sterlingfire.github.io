@@ -1,0 +1,17 @@
+{% assign r = include.role %}
+<li class="role">
+  <div class="role-meta">
+    <span class="mono">{{ r.years }}</span>
+    <span class="mono where">{{ r.where }}</span>
+  </div>
+  <div class="role-body">
+    <p class="role-title">{{ r.title }}{% if r.note %} <span class="role-note">· {{ r.note }}</span>{% endif %}</p>
+    <p class="role-org">{{ r.org }}</p>
+    {% if r.summary %}{{ r.summary | markdownify }}{% endif %}
+    {% if r.bullets %}
+      <ul>
+        {% for b in r.bullets %}<li>{{ b | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</li>
