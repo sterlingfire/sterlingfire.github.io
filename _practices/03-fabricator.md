@@ -29,8 +29,8 @@ credits:
       - Built and struck video walls
       - Set up and struck TVs and monitors for conferences and trade show booths
   - name: Festival planning & production
-    role: Planner · producer
-    summary: Planning and producing festivals.
+    role: Priceless · Wildfire
+    summary: Planned and produced Priceless and Wildfire.
   - name: Fire safety
     role: Fire safety lead
     summary: Fire safety lead for fire performance at events.
@@ -40,5 +40,5 @@ credits:
 The structural half of installation work, and the half that has to be on time. I cut parts
 on CNC in a scenic shop in Richmond, wire the LEDs into the set pieces we build, and work
 union calls as a stagehand with IATSE Local 16 — stages, video walls, and the video systems
-that run them. I've also planned and produced festivals and led fire safety for performers.
+that run them. I've also planned and produced Priceless and Wildfire and led fire safety for performers.
 Shop, stage, and site: I know what it takes to get a show built, loaded in, and run.

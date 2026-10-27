@@ -80,8 +80,6 @@ appears in the page and the hero nav automatically.
 
 - **More installation projects.** `_practices/02-artist.md` has a `TODO` comment where they
   go. Add each as a credit.
-- **Festival names** for the festival planning and production credit in
-  `_practices/03-fabricator.md`.
 - **Photos of that work.** Put images in `assets/img/` and tell me which projects they
   belong to, and I'll add them to the layout.
 

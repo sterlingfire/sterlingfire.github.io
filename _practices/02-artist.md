@@ -29,7 +29,7 @@ credits:
     also: [fabricator]
   - name: The Canopy
     role: Lighting design · Burning Man
-    summary: Designed the lighting for the Canopy.
+    summary: A large LED installation shaped like a chandelier. You lie underneath it and watch brilliant patterns move to an accompanying musical score. I designed the lighting.
 
 # TODO (Sterling): add more installation projects as credits, and send photos.
 ---
