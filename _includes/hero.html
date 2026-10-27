@@ -3,7 +3,6 @@
   <div class="wrap hero-inner">
     <div class="eyebrow mono rise">
       <span>{{ page.location }}</span>
-      <span>{{ page.kicker }}</span>
     </div>
 
     <h1 class="rise">{{ site.title }}</h1>
@@ -19,7 +18,7 @@
       <div class="hero-text">
         <div class="lede">{{ content }}</div>
 
-        <p class="status"><span class="dot" aria-hidden="true"></span>{{ page.status }}</p>
+        <a class="status" href="#contact"><span class="dot" aria-hidden="true"></span>{{ page.status }}</a>
 
         <nav class="jumps" aria-label="Practices">
           {% assign practices = site.practices | sort: "order" %}

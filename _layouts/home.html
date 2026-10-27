@@ -4,6 +4,8 @@ layout: default
 {% include hero.html %}
 
 <main id="main">
+  {% include hire.html %}
+
   {% assign practices = site.practices | sort: "order" %}
   {% for practice in practices %}
     {% include practice.html practice=practice %}

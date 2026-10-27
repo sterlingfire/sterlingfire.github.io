@@ -66,6 +66,12 @@ a { color: inherit; }
   text-transform: uppercase; color: var(--mute); font-variant-numeric: tabular-nums;
 }
 
+/* Each practice's colour, exposed as --hue for cards, chips and links. */
+.hue-sky { --hue: var(--sky); }
+.hue-flux { --hue: var(--flux); }
+.hue-spike { --hue: var(--spike); }
+.hue-ember { --hue: var(--ember); }
+
 /* ---------- hero ---------- */
 .hero { position: relative; isolation: isolate; border-bottom: 1px solid var(--line); }
 #heroTrails { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.95; }
@@ -101,11 +107,13 @@ h1 { font-size: clamp(2.9rem, 10.6vw, 7.4rem); letter-spacing: -0.038em; margin-
 .lede p + p { margin-top: 1em; }
 
 .status {
+  text-decoration: none; transition: border-color 0.18s, background 0.18s;
   display: inline-flex; align-items: center; gap: 10px; flex-wrap: wrap;
   border: 1px solid var(--line); background: rgba(18, 18, 24, 0.66);
   padding: 9px 15px; margin-bottom: 36px;
   font-family: var(--mono); font-size: 12.5px; color: #dcdce4; letter-spacing: 0.02em;
 }
+.status:hover { border-color: rgba(255, 255, 255, 0.32); background: rgba(24, 24, 32, 0.8); }
 .dot { width: 7px; height: 7px; border-radius: 50%; background: #49dc8b; box-shadow: 0 0 10px #49dc8b; flex: none; }
 
 .jumps { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -138,8 +146,8 @@ h1 { font-size: clamp(2.9rem, 10.6vw, 7.4rem); letter-spacing: -0.038em; margin-
 .plate::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(7, 7, 10, 0.25), var(--ink)); }
 .chapter-inner { padding-block: clamp(44px, 7vh, 76px) clamp(56px, 9vh, 96px); }
 
-.chead { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 20px; margin-bottom: 22px; }
-.chead h2 { font-size: clamp(2.1rem, 7vw, 3.9rem); letter-spacing: -0.03em; }
+.chapter-inner > h2 { font-size: clamp(2.1rem, 7vw, 3.9rem); letter-spacing: -0.03em; margin-bottom: 12px; }
+.tagline { margin-bottom: 22px; letter-spacing: 0.1em; line-height: 1.6; }
 .rule { height: 1px; background: var(--line); margin-bottom: 26px; }
 .c-sky h2 { color: var(--sky); }
 .c-flux h2 { color: var(--flux); }
@@ -170,11 +178,54 @@ h1 { font-size: clamp(2.9rem, 10.6vw, 7.4rem); letter-spacing: -0.038em; margin-
 .role-title { font-family: var(--display); font-weight: 700; font-size: 1.12rem; letter-spacing: -0.012em; line-height: 1.3; margin-bottom: 2px; }
 .role-note { font-weight: 400; color: #8e8e9b; }
 .role-org { font-family: var(--mono); font-size: 12.5px; color: #c2c2ce; margin-bottom: 9px; letter-spacing: 0.03em; }
-.role-body > p:not(.role-title):not(.role-org) { color: var(--body-text); font-size: 0.97rem; max-width: 58ch; }
+.role-body > p:not(.role-title):not(.role-org):not(.also) { color: var(--body-text); font-size: 0.97rem; max-width: 58ch; }
 .role-body ul { margin: 0; padding-left: 1.05em; color: var(--body-text); font-size: 0.97rem; max-width: 58ch; }
 .role-body li { margin-block: 3px; }
 .role-body li::marker { color: var(--mute); }
 .where { display: block; margin-top: 3px; color: var(--dim); }
+
+.sublabel {
+  font-family: var(--mono); font-weight: 500; font-size: 12px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--mute); margin: 0 0 6px;
+}
+.roles + .sublabel { margin-top: -10px; }
+
+.credits {
+  list-style: none; margin: 0 0 46px; padding: 0;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 0 32px;
+}
+.credit { min-width: 0; padding-block: 20px; border-top: 1px solid var(--line); }
+.credit > p:not(.role-title):not(.role-org):not(.also) { color: var(--body-text); font-size: 0.97rem; }
+.credit ul { margin: 0; padding-left: 1.05em; color: var(--body-text); font-size: 0.97rem; }
+.credit li { margin-block: 3px; }
+.credit li::marker { color: var(--mute); }
+
+.also { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; margin-top: 10px; font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; }
+.also-label { color: var(--dim); }
+.also-link { color: var(--hue); text-decoration: none; border-bottom: 1px solid transparent; }
+.also-link::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--hue); margin-right: 6px; vertical-align: 1px; }
+.also-link:hover { border-bottom-color: var(--hue); }
+
+/* ---------- hire ---------- */
+.hire { border-bottom: 1px solid var(--line); }
+.hire-inner { padding-block: clamp(52px, 8vh, 88px); }
+.hire h2 { font-size: clamp(1.9rem, 6vw, 3rem); letter-spacing: -0.03em; margin-bottom: 10px; }
+.hire-lede { color: var(--lede); max-width: 62ch; margin-bottom: 30px; }
+.hire-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 14px; margin-bottom: 40px; }
+.hire-card {
+  min-width: 0; display: flex; flex-direction: column; gap: 10px;
+  background: var(--ink-2); border: 1px solid var(--line); border-top: 2px solid var(--hue);
+  padding: 20px 20px 18px;
+}
+.hire-role { color: var(--hue); text-decoration: none; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; align-self: flex-start; }
+.hire-role:hover { text-decoration: underline; text-underline-offset: 3px; }
+.hire-card h3 { font-family: var(--display); font-weight: 700; font-size: 1.18rem; letter-spacing: -0.012em; line-height: 1.25; }
+.hire-what { color: var(--body-text); font-size: 0.95rem; flex: 1; }
+.hire-terms { color: var(--paper); font-size: 11.5px; letter-spacing: 0.06em; line-height: 1.6; padding-top: 12px; border-top: 1px solid var(--line); min-height: calc(3.2em + 13px); /* two lines, so the rules line up across cards */ }
+.hire-notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 18px 40px; }
+.note-block { border-left: 2px solid var(--line); padding-left: 18px; max-width: 60ch; }
+.note-label { color: var(--mute); font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 8px; }
+.note-block p:not(.note-label) { color: var(--lede); }
 
 /* videos */
 .vid-h { font-family: var(--display); font-weight: 700; font-size: 1.25rem; margin-bottom: 6px; }

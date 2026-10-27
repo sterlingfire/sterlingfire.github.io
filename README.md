@@ -1,7 +1,7 @@
 # Sterling Bishop — portfolio
 
-A Jekyll site for GitHub Pages. Four practices — **Engineer**, **LED Installation & Prop
-Design**, **Fire Performer**, **Fabrication & Stagecraft** — on a dark theme whose visuals are drawn in canvas as
+A Jekyll site for GitHub Pages. Four practices — **Engineer**, **Artist**, **Fabricator**,
+**Performer** — on a dark theme whose visuals are drawn in canvas as
 long-exposure light trails.
 
 ## Deploy to GitHub Pages
@@ -28,8 +28,10 @@ All the content is in Markdown and YAML. You shouldn't need to touch HTML.
 | --- | --- |
 | Name, site description, email | `_config.yml` |
 | Hero text, status line, photo | `index.md` (front matter for the details, body for the intro paragraph) |
-| A practice's intro paragraph | the body of `_practices/01-software.md`, `02-light.md`, `03-fire.md`, `04-fabrication.md` |
-| Roles, dates, tags | the front matter of those same files |
+| "Bring me in for" cards | `_data/hire.yml` (one per practice: the need, what you do, the terms) |
+| Dream project, where you're headed | `dream:` and `learning:` in `index.md` |
+| A practice's intro paragraph | the body of `_practices/01-engineer.md`, `02-artist.md`, `03-fabricator.md`, `04-performer.md` |
+| Roles, credits, tags, tagline | the front matter of those same files |
 | Videos | `_data/videos.yml` |
 | LinkedIn / Instagram / YouTube links | `_data/links.yml` |
 | Hero photo | `assets/img/swords.jpg` |
@@ -47,16 +49,39 @@ Markdown, so `[links](https://…)` and `**bold**` work.
     - Made the other thing [faster](https://example.com)
 ```
 
-Roles show in the order you list them. Practices sort by their `order:` value.
+### Roles vs. credits
+
+Every practice uses the same rule, so dates stay consistent:
+
+- **`roles:`** are jobs with an employer and a tenure. They show a year range
+  (`2022 — 2023`, `2026 — Present`) and are listed **newest first**.
+- **`credits:`** are projects and ongoing gig work: burn projects, union calls, festivals.
+  They have no dates.
+
+Either kind can carry `also: [artist, fabricator]` to show which other practices the work
+touches. That renders as coloured links to those sections, and it's what ties the four
+practices together.
+
+```yaml
+credits:
+  - name: Sonic Runway
+    role: LED & electrical · build crew
+    summary: One or two sentences on what you did.
+    also: [fabricator]
+```
+
+Practices sort by their `order:` value.
 
 To add a practice, copy any file in `_practices/`, give it the next `order:`, a `slug:`
-(used in the nav and the `#anchor`), and a `hue:` of `sky`, `flux`, `ember` or `spike`. It
+(used in the nav, the `#anchor`, and `also:` links), and a `hue:` of `sky`, `flux`, `ember` or `spike`. It
 appears in the page and the hero nav automatically.
 
 ### Still to add
 
-- **LED installation projects.** `_practices/02-light.md` has a `TODO` comment where they
-  go. Add each one as a role with its title, venue or event, year, and a few bullets.
+- **More installation projects.** `_practices/02-artist.md` has a `TODO` comment where they
+  go. Add each as a credit.
+- **Festival names** for the festival planning and production credit in
+  `_practices/03-fabricator.md`.
 - **Photos of that work.** Put images in `assets/img/` and tell me which projects they
   belong to, and I'll add them to the layout.
 

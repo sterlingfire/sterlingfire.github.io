@@ -1,0 +1,17 @@
+# One card per practice, in practice order. `slug` must match a file in _practices/.
+- slug: engineer
+  need: Full-stack or test engineering
+  what: TypeScript, Python, and test automation — especially on products that touch hardware, video, or the physical world.
+  terms: Full-time · on-site, hybrid, or remote
+- slug: artist
+  need: LED installation & lighting
+  what: Wiring, building, and lighting installations, art pieces, and props — from the circuit to the cue.
+  terms: Contract · per project
+- slug: fabricator
+  need: Fabrication & event crew
+  what: CNC cutting, scenic carpentry, LED wiring, and stage and video crew — plus festival production and fire safety.
+  terms: Contract · per project · IATSE Local 16 calls
+- slug: performer
+  need: Fire performance
+  what: Solo fire on staff, poi, rope dart, and swords, choreographed to your stage and your music.
+  terms: Bookings

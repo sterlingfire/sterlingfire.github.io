@@ -1,11 +1,12 @@
 ---
 order: 1
-slug: software
+slug: engineer
 title: Engineer
+tagline: Full-stack TypeScript & Python · test automation · 2012 — Present
 hue: sky
 plate: circuit
-years: 2012 — Present
 tags: [TypeScript, Node.js, Python, React, AWS, Django, Jest, Playwright, Appium, SQL]
+# Dated jobs, newest first.
 roles:
   - years: 2022 — 2023
     where: Las Vegas, NV
@@ -17,22 +18,6 @@ roles:
     title: SDET
     org: Adomni
     summary: Built and owned the end-to-end test suites for three separate web applications.
-  - years: 2018 — 2020
-    where: Boston, MA
-    title: Test Automation Engineer
-    org: Infrared5
-    bullets:
-      - Designed and built the test harness for Red5 Pro streaming software
-      - Automated API suites and wrote mobile tests with Appium
-      - Supported third-party developers working against the SDK and APIs
-  - years: 2017 — 2018
-    where: Greater Boston
-    title: Integration Test Engineer
-    org: LevelUp
-    bullets:
-      - Tested new partner integrations through direct API requests
-      - Built data visualization dashboards with SQL and Chartio
-      - Managed sprint priorities and the release cycle for three developers
   - years: "2021"
     where: San Francisco, CA
     title: Full-Stack Engineer
@@ -43,6 +28,22 @@ roles:
       - Slack webhook integration announcing new content to users
       - New-user login flow and welcome page via Django routing and forms
       - Fixed production bugs and wrote Jest integration tests against regression
+  - years: 2018 — 2020
+    where: Boston, MA
+    title: Test Automation Engineer
+    org: Infrared5
+    bullets:
+      - Designed and built the test harness for Red5 Pro streaming software
+      - Automated API suites and wrote mobile tests with Appium
+      - Supported third-party developers working against the SDK and APIs
+  - years: 2017 — 2018
+    where: Boston, MA
+    title: Integration Test Engineer
+    org: LevelUp
+    bullets:
+      - Tested new partner integrations through direct API requests
+      - Built data visualization dashboards with SQL and Chartio
+      - Managed sprint priorities and the release cycle for three developers
   - years: 2015 — 2017
     where: Cambridge, MA
     title: Quality Assurance Engineer

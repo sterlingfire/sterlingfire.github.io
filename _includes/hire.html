@@ -1,0 +1,29 @@
+<section class="hire" id="hire" aria-labelledby="h-hire">
+  <div class="wrap hire-inner">
+    <h2 id="h-hire">Bring me in for</h2>
+    <p class="hire-lede">{{ page.hire_lede }}</p>
+
+    <div class="hire-grid">
+      {% for h in site.data.hire %}
+        {% assign t = site.practices | where: "slug", h.slug | first %}
+        <article class="hire-card hue-{{ t.hue }}">
+          <a class="hire-role mono" href="#{{ t.slug }}">{{ t.title }}</a>
+          <h3>{{ h.need }}</h3>
+          <p class="hire-what">{{ h.what }}</p>
+          <p class="hire-terms mono">{{ h.terms }}</p>
+        </article>
+      {% endfor %}
+    </div>
+
+    <div class="hire-notes">
+      <div class="note-block">
+        <p class="mono note-label">The project I'd drop everything for</p>
+        <p>{{ page.dream }}</p>
+      </div>
+      <div class="note-block">
+        <p class="mono note-label">Where I'm headed</p>
+        <p>{{ page.learning }}</p>
+      </div>
+    </div>
+  </div>
+</section>

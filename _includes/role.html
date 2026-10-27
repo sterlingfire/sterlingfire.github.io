@@ -13,5 +13,6 @@
         {% for b in r.bullets %}<li>{{ b | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endfor %}
       </ul>
     {% endif %}
+    {% include also.html also=r.also %}
   </div>
 </li>

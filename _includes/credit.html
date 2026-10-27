@@ -1,0 +1,12 @@
+{% assign c = include.credit %}
+<li class="credit">
+  <p class="role-title">{{ c.name }}</p>
+  <p class="role-org">{{ c.role }}</p>
+  {% if c.summary %}{{ c.summary | markdownify }}{% endif %}
+  {% if c.bullets %}
+    <ul>
+      {% for b in c.bullets %}<li>{{ b | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endfor %}
+    </ul>
+  {% endif %}
+  {% include also.html also=c.also %}
+</li>

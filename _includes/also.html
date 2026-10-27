@@ -1,0 +1,9 @@
+{% if include.also %}
+<p class="also">
+  <span class="also-label">Also</span>
+  {% for s in include.also %}
+    {% assign t = site.practices | where: "slug", s | first %}
+    <a class="also-link hue-{{ t.hue }}" href="#{{ t.slug }}">{{ t.title }}</a>
+  {% endfor %}
+</p>
+{% endif %}

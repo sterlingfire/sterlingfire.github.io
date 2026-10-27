@@ -2,10 +2,8 @@
 <section class="chapter c-{{ p.hue }}" id="{{ p.slug }}" aria-labelledby="h-{{ p.slug }}">
   <div class="plate"><canvas data-plate="{{ p.plate }}" data-hue="{{ p.hue }}" aria-hidden="true"></canvas></div>
   <div class="wrap chapter-inner">
-    <div class="chead">
-      <h2 id="h-{{ p.slug }}">{{ p.title }}</h2>
-      <span class="mono">{{ p.years }}</span>
-    </div>
+    <h2 id="h-{{ p.slug }}">{{ p.title }}</h2>
+    <p class="tagline mono">{{ p.tagline }}</p>
     <div class="rule"></div>
 
     <div class="chap-lede">{{ p.content | markdownify }}</div>
@@ -14,11 +12,19 @@
       {% for tag in p.tags %}<li>{{ tag }}</li>{% endfor %}
     </ul>
 
-    <ul class="roles">
-      {% for role in p.roles %}
-        {% include role.html role=role %}
-      {% endfor %}
-    </ul>
+    {% if p.roles %}
+      <h3 class="sublabel mono">Roles</h3>
+      <ul class="roles">
+        {% for role in p.roles %}{% include role.html role=role %}{% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if p.credits %}
+      <h3 class="sublabel mono">Projects &amp; credits</h3>
+      <ul class="credits">
+        {% for credit in p.credits %}{% include credit.html credit=credit %}{% endfor %}
+      </ul>
+    {% endif %}
 
     {% if p.videos %}
       <h3 class="vid-h">Performance footage</h3>
